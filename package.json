@@ -1,0 +1,26 @@
+{
+  "name": "mor3d",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "engines": {
+    "node": "18.16.1",
+    "npm": "9.5.1"
+  },
+  "scripts": {
+    "dev": "cd www && npm run dev",
+    "preview": "cd www && npm run build && npm run preview",
+    "build": "npm run _b-basic && npm run _b-www",
+    "_b-basic": "cd basic && npm run build",
+    "_b-www": "cd www && npm run build",
+    "ci-build": "npm run _ci-basic && npm run _ci-www",
+    "_ci-basic": "cd basic && npm ci && npm run build",
+    "_ci-www": "cd www && npm ci && npm run build",
+    "sync-lock": "npm run _sync-lock-basic && npm run _sync-lock-www",
+    "_sync-lock-basic": "cd basic && npm i",
+    "_sync-lock-www": "cd www && npm i"
+  },
+  "dependencies": {
+    "shelljs": "^0.8.5"
+  }
+}

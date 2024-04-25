@@ -1,0 +1,26 @@
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #dadadaa5 #efefefa5;
+}
+
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  -webkit-width: 0.3rem !important;
+  width: 0.3rem !important;
+
+
+}
+
+::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px !important;
+  border-radius: 10px !important;
+  background: rgba(0, 0, 0, 0) !important;
+}
+
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px !important;
+  border-radius: 10px !important;
+  background: var(--surface-300) !important;
+}
