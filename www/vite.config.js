@@ -29,6 +29,8 @@ export default defineConfig({
   ],
   resolve: {},
   server: {
+    fs: {},
+    open: "/",
     host: "localhost",
     port: 3000,
     proxy: {},
