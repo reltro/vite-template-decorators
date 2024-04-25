@@ -8,6 +8,7 @@
     "npm": "9.5.1"
   },
   "scripts": {
+    "setup-nvm": "node .set-nvm.js",
     "dev": "cd www && npm run dev",
     "preview": "cd www && npm run build && npm run preview",
     "build": "npm run _b-basic && npm run _b-www",
