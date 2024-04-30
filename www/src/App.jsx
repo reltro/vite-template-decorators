@@ -1,6 +1,7 @@
 /**
  *  CSS
  */
+import { useEffect } from "react";
 import "./App.css";
 
 import { MyDecoratedClass } from "@template/decorators";
@@ -9,7 +10,10 @@ import { MyDecoratedClass } from "@template/decorators";
  * MAIN
  */
 export function App() {
-  const foo = new MyDecoratedClass();
+  useEffect(() => {
+    const foo = new MyDecoratedClass();
+    console.debug("FOO", foo);
+  }, []);
 
   return (
     <div

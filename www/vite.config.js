@@ -4,6 +4,7 @@ import react from "@vitejs/plugin-react";
 import autoprefixer from "autoprefixer";
 import { visualizer } from "rollup-plugin-visualizer";
 import babel from "vite-plugin-babel";
+import { extname } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -19,14 +20,19 @@ export default defineConfig({
           ["@babel/plugin-proposal-decorators", { version: "2023-11" }],
         ],
       },
+      loader: (path) => {
+        if (extname(path) === ".jsx") {
+          return "jsx";
+        }
+      },
     }),
-
     visualizer({
       emitFile: true,
       filename: "stats.html",
       //template:
     }),
   ],
+
   resolve: {},
   server: {
     fs: {},
